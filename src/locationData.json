@@ -1,0 +1,50 @@
+[
+	{
+		"name": "Batteries Plus Bulbs",
+		"address": "1540 Hudson Bridge Rd",
+		"city": "Stockbridge",
+		"state": "GA",
+		"zipcode": "30281",
+		"coordinates": {"lat": 33.505944, "lng": -84.237824}
+	},
+	{
+		"name": "Discount Tire",
+		"address": "1420 Hudson Bridge Rd",
+		"city": "Stockbridge",
+		"state": "GA",
+		"zipcode": "30281",
+		"coordinates": {"lat": 33.505649, "lng": -84.233839}
+	},
+	{
+		"name": "Firehouse Subs",
+		"address": "1465 Hudson Bridge Rd #109",
+		"city": "Stockbridge",
+		"state": "GA",
+		"zipcode": "30281",
+		"coordinates": {"lat": 33.503927, "lng": -84.235158}
+	},
+	{
+		"name": "Mellow Mushroom",
+		"address": "1410 Hudson Bridge Rd",
+		"city": "Stockbridge",
+		"state": "GA",
+		"zipcode": "30281",
+		"coordinates": {"lat": 33.505718, "lng": -84.233271}
+	},
+	{
+		"name": "Walmart Supercenter",
+		"address": "1400 Hudson Bridge Rd",
+		"city": "Stockbridge",
+		"state": "GA",
+		"zipcode": "30281",
+		"coordinates": {"lat": 33.507351, "lng": -84.235620}
+	},
+	{
+		"name": "Zaxby's Chicken Fingers & Buffalo Wings",
+		"address": "1480 Hudson Bridge Rd",
+		"city": "Stockbridge",
+		"state": "GA",
+		"zipcode": "30281",
+		"coordinates": {"lat": 33.505056, "lng": -84.235845}
+	}
+]
