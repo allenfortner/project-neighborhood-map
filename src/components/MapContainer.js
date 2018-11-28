@@ -40,7 +40,7 @@ class MapContainer extends Component {
 				initialCenter={center} 
 				zoom={this.props.zoom}
 				onClick={this.closeInfoWindow}>
-					{this.props.locations.map((loc, index) => {
+					{this.props.allLocations.map((loc, index) => {
 						return (
 							<Marker
 								key={index}
