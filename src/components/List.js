@@ -4,6 +4,7 @@ class List extends Component {
 	state = {}
 	
 	render() {
+		//Styles for the whole list
 		const listStyles = {
 			width: "250px",
 			height: "100%",
@@ -14,12 +15,32 @@ class List extends Component {
 			backgroundColor: "white"
 		}
 		
+		//Styles for the close button
+		const closeBtnStyles = {
+			backgroundColor: "#D3D3D3",
+			color: "black",
+			fontWeight: "bold",
+			borderStyle: "outset",
+			float: "right",
+			marginRight: "10px",
+			marginTop: "10px"
+		}
+		
+		//Styles for the input box
+		const inputStyles = {
+			float: "left",
+			margin: "10px",
+			width: "90%"
+		}
+		
+		//Styles for each item in the list
 		const listItemStyles = {
 			color: "black",
 			textAlign: "left",
 			paddingLeft: "10px"
 		}
 		
+		//Styles for the buttons inside the list items
 		const listLinkStyles = {
 			width: "210px",
 			fontSize: "15px",
@@ -40,7 +61,9 @@ class List extends Component {
 		if (open === true) {		
 			return (
 					<div className="List" style={listStyles}>
-						{this.props.allLocations.map((loc, index) => {
+					<button style={closeBtnStyles} onClick={this.props.listToggle}>Close &times;</button>
+					<input type="text" placeholder="" style={inputStyles} value={this.props.query} onChange={(e) => this.props.updateQuery(e.target.value)}/>
+						{this.props.locations.map((loc, index) => {
 							return (
 								<li className="listItem" key={index} style={listItemStyles}>
 									<button style={listLinkStyles}>{loc.name}</button>
