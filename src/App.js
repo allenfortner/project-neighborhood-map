@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MapContainer from './components/MapContainer';
 import List from './components/List.js';
-import locationData from './locationData.json';
+import axios from 'axios';
 import './App.css';
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
 		lat: 33.505952,
 		lng: -84.235346,
 		zoom: 17,
-		allLocations: locationData,
+		allLocations: [],
 		selectedLocations: [],
 		query: '',
 		listOpen: false,
@@ -20,6 +20,22 @@ class App extends Component {
 		map: null,
 		coordinates: {}
 	};
+	
+	componentWillMount = () => {
+		axios.get("https://api.myjson.com/bins/1dmeu2").then(results => {
+			console.log(results);
+			if (results.status === 200) {
+				this.setState({
+					allLocations: results.data,
+					selectedLocations: results.data
+				});
+			} else {
+				alert (
+					"Problem fetching location data from MyJSON. Please reload the page and try again!"
+				);
+			}
+		});
+	}
 
 	componentDidMount = () => {
 		//When the component is mounted, reset the selected locations filter
