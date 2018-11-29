@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import DefaultIcon from '../wht-blank.png';
+import ClickedIcon from '../red-blank.png';
 
 const API_Key = "AIzaSyCp9ZkXaTEwkTIOcrsu398dZtf1CGzeCbA";
 
@@ -31,7 +33,7 @@ class MapContainer extends Component {
 							zipcode={loc.zipcode}
 							position={loc.coordinates}
 							onClick={this.props.openInfoWindow}
-							animation={2}
+							icon={this.props.activeMarker.name === loc.name ? ClickedIcon : DefaultIcon}
 						/>
 					);
 				})}
