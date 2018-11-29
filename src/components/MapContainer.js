@@ -15,6 +15,8 @@ class MapContainer extends Component {
 
 		return (
 			<Map
+				role="application"
+				aria-label="map"
 				onReady={this.addMapHandler}
 				google={this.props.google}
 				initialCenter={center}
